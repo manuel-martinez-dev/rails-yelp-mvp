@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Restaurant.destroy_all
+
 puts 'Creating restaurants...'
 restaurants_attributes = [
   {
@@ -13,7 +15,6 @@ restaurants_attributes = [
     address:      '78, nowhere st',
     phone_number: '124898953',
     category:     'italian',
-    reviews:      'This place is a real shit restaurant, it should be closed down ASAP'
   }
 ]
 Restaurant.create!(restaurants_attributes)
